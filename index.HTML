@@ -869,6 +869,30 @@
     'فتح اللعبة والاستمتاع بجميع الميزات'
   ]
 }, 
+{
+  id: 'gtasanandreas',
+  type: 'game',
+  title: 'Grand Theft Auto: San Andreas مهكرة',
+  rawTitle: 'Grand Theft Auto: San Andreas',
+  version: '2.11.277',
+  img: 'https://getmodsapk.com/storage/GTA%20San%20Andreas%20MOD%20APK1.png',
+  desc: 'لعبة أكشن مفتوحة العالم مع جميع الميزات المدفوعة مفعلة',
+  features: [
+    'أموال غير محدودة',
+    'جميع المهام مفتوحة',
+    'شفرات مفعلة',
+    'لا يوجد إعلانات',
+    'خرائط مفتوحة بالكامل',
+    'مركبات غير محدودة'
+  ],
+  apk: 'https://getmodsapk.com/dl-track/gta-san-andreas-mod-apk/153076',
+  size: '2.6 GB',
+  steps: [
+    'تحميل ملف APK (2.6GB)',
+    'تثبيت APK مباشرة',
+    'فتح اللعبة والاستمتاع بجميع الميزات'
+  ]
+},
       {
         id: 'multipleaccounts',
         type: 'app',
@@ -985,7 +1009,7 @@
       // Home: أول عنصرين من الألعاب + أول عنصرين من التطبيقات
       const games = items.filter(i => i.type === 'game');
       const apps = items.filter(i => i.type === 'app');
-      homeGrid.innerHTML = [...games.slice(0, 8), ...apps.slice(0, 10)].map(cardTemplate).join('');
+      homeGrid.innerHTML = [...games.slice(0, 100000), ...apps.slice(0, 100000)].map(cardTemplate).join('');
       gamesGrid.innerHTML = games.map(cardTemplate).join('');
       appsGrid.innerHTML = apps.map(cardTemplate).join('');
       bindDetailButtons();
