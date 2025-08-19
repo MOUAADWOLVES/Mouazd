@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-  <title>APK ARAB - أقوى التطبيقات والألعاب المعدلة</title>
+  <title>APK ARAB - أقوى التطبيقات والألعاب المعدلة </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,624 +18,123 @@
       --card: #131316;
       --ring: rgba(212, 175, 55, .35);
     }
-    
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      font-family: 'Cairo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(60% 80% at 100% 0%, #151516 0%, var(--bg) 55%) fixed;
-      color: var(--text);
-      line-height: 1.65;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    
-    /* Top Dev Bar */
-    .devbar {
-      background: linear-gradient(90deg, #0b0b0c, #1a1a1d);
-      border-bottom: 1px solid var(--ring);
-      padding: 0.5rem 0;
-      text-align: center;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      font-size: 14px;
-    }
-    
-    .devbar a {
-      display: inline-flex;
-      gap: 0.5rem;
-      align-items: center;
-      text-decoration: none;
-      color: var(--gold);
-    }
-    
-    .devbar img {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-    }
-    
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--ring);
-    }
-    
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-    
-    .head {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-      flex-wrap: wrap;
-    }
-    
-    .brand {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      min-width: 180px;
-    }
-    
-    .brand .logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.5), 0 0 18px rgba(212, 175, 55, 0.25);
-      flex-shrink: 0;
-    }
-    
-    .brand .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .brand .titles h1 {
-      margin: 0;
-      font-size: clamp(18px, 2.6vw, 28px);
-      font-weight: 800;
-      background: linear-gradient(90deg, var(--gold), #fff 70%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1.2;
-    }
-    
-    .brand .titles p {
-      margin: 2px 0 0;
-      color: var(--muted);
-      font-weight: 600;
-      font-size: 12px;
-    }
-    
-    /* Nav */
-    .nav {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      transition: all 0.3s ease;
-    }
-    
-    .nav a {
-      display: inline-flex;
-      gap: 0.4rem;
-      align-items: center;
-      padding: 8px 10px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 700;
-      border: 1px solid transparent;
-      font-size: 14px;
-      white-space: nowrap;
-    }
-    
-    .nav a:hover,
-    .nav a.active {
-      border-color: var(--ring);
-      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.08) inset;
-      color: #fff;
-    }
-    
-    .menu-btn {
-      display: none;
-      background: transparent;
-      border: 0;
-      color: var(--text);
-      font-size: 22px;
-      cursor: pointer;
-      padding: 8px;
-    }
-    
-    /* Search */
-    .search {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      flex-grow: 1;
-      max-width: 500px;
-      min-width: 150px;
-    }
-    
-    .search input {
-      width: 100%;
-      background: linear-gradient(180deg, #0f0f11, #0b0b0c);
-      border: 1px solid var(--ring);
-      color: #fff;
-      padding: 10px 12px;
-      border-radius: 12px;
-      font-weight: 600;
-      outline: none;
-      font-family: inherit;
-      font-size: 14px;
-    }
-    
-    .search button {
-      background: var(--gold);
-      color: #111;
-      border: 0;
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-weight: 800;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 14px;
-      white-space: nowrap;
-    }
-    
-    .search button:hover {
-      background: var(--gold-2);
-      color: #fff;
-    }
-    
-    main {
-      flex: 1;
-      width: 100%;
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 16px;
-    }
-    
-    h2.section-title {
-      display: flex;
-      gap: 0.6rem;
-      align-items: center;
-      margin: 20px 0 12px;
-      font-size: clamp(18px, 4vw, 22px);
-      color: var(--gold);
-    }
-    
-    /* Grid & Card */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 16px;
-    }
-    
-    .card {
-      background: linear-gradient(180deg, #131316, #0f0f12);
-      border: 1px solid var(--ring);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-      position: relative;
-    }
-    
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 36px rgba(212, 175, 55, 0.18);
-    }
-    
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(120px 40px at 20% -10%, rgba(212, 175, 55, 0.22), transparent 60%), radial-gradient(160px 40px at 80% 110%, rgba(212, 175, 55, 0.18), transparent 60%);
-      opacity: 0.8;
-      pointer-events: none;
-    }
-    
-    .thumb {
-      height: 160px;
-      overflow: hidden;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-    
-    .thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    
-    .body {
-      padding: 12px;
-    }
-    
-    .title {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: center;
-    }
-    
-    .title h3 {
-      margin: 0;
-      font-size: 16px;
-      color: var(--gold);
-      line-height: 1.3;
-    }
-    
-    .ver {
-      font-size: 11px;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-    
-    .desc {
-      margin: 8px 0 10px;
-      color: #c9c9cf;
-      font-size: 13px;
-      min-height: 40px;
-      line-height: 1.5;
-    }
-    
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 4px;
-    }
-    
-    .chip {
-      font-size: 11px;
-      color: #111;
-      background: linear-gradient(180deg, var(--gold), #f6e089);
-      border: 1px solid rgba(0, 0, 0, 0.15);
-      padding: 3px 8px;
-      border-radius: 999px;
-      font-weight: 800;
-    }
-    
-    .cta {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid var(--ring);
-      background: #0f0f11;
-      color: #fff;
-      font-weight: 800;
-      text-decoration: none;
-      cursor: pointer;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-    
-    .btn.gold {
-      background: var(--gold);
-      color: #111;
-      border-color: transparent;
-    }
-    
-    .btn.gold:hover {
-      background: var(--gold-2);
-      color: #fff;
-    }
-    
-    /* Modal */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.78);
-      display: none;
-      align-items: flex-start;
-      justify-content: center;
-      overflow: auto;
-      z-index: 1200;
-      padding: 20px;
-    }
-    
-    .modal.open {
-      display: flex;
-    }
-    
-    .modal-card {
-      background: #0e0e10;
-      border: 1px solid var(--ring);
-      border-radius: 16px;
-      width: 100%;
-      max-width: min(920px, 95vw);
-      margin: 40px 0;
-      overflow: hidden;
-      box-shadow: 0 18px 52px rgba(0, 0, 0, 0.5);
-    }
-    
-    .modal-hero {
-      position: relative;
-    }
-    
-    .modal-hero img {
-      width: 100%;
-      max-height: 280px;
-      object-fit: cover;
-    }
-    
-    .close {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      border: 0;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      color: #fff;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-    
-    .modal-body {
-      padding: 16px;
-    }
-    
-    .modal-body h3 {
-      margin: 0 0 6px;
-      color: var(--gold);
-      font-size: 20px;
-    }
-    
-    .version {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
-    
-    .steps {
-      background: #0f0f12;
-      border: 1px solid var(--ring);
-      border-radius: 10px;
-      padding: 12px;
-      margin-top: 12px;
-      font-size: 14px;
-    }
-    
-    .steps ol {
-      margin: 8px 0 0;
-      padding-right: 18px;
-    }
-    
-    .steps li {
-      margin-bottom: 6px;
-    }
-    
-    /* Ad popup */
-    .ad {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      display: none;
-      z-index: 1100;
-      padding: 20px;
-    }
-    
-    .ad.open {
-      display: flex;
-    }
-    
-    .ad-card {
-      background: #111215;
-      border: 1px solid var(--ring);
-      border-radius: 16px;
-      margin: auto;
-      width: 100%;
-      max-width: 500px;
-      overflow: hidden;
-    }
-    
-    .ad-head {
-      background: linear-gradient(90deg, #0e0e10, #1b1b1f);
-      padding: 12px 14px;
-      color: var(--gold);
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 16px;
-    }
-    
-    .ad-body {
-      padding: 16px;
-      text-align: center;
-    }
-    
-    .ad-body p {
-      margin-bottom: 16px;
-      font-size: 14px;
-    }
-    
-    .ad a.tg {
-      display: inline-flex;
-      gap: 0.5rem;
-      align-items: center;
-      justify-content: center;
-      background: #229ED9;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 800;
-      padding: 10px 14px;
-      border-radius: 10px;
-      margin: 6px;
-      font-size: 14px;
-    }
-    
-    footer {
-      border-top: 1px solid var(--ring);
-      margin-top: 40px;
-      padding: 20px 0;
-    }
-    
-    footer .container {
-      padding: 0 16px;
-      color: #a7a7ad;
-      text-align: center;
-    }
-    
-    footer p {
-      margin-bottom: 12px;
-      font-size: 14px;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 900px) {
-      .head {
-        gap: 12px;
-        padding: 8px 0;
-      }
-      
-      .nav {
-        display: none;
-        width: 100%;
-        order: 3;
-        flex-direction: column;
-        gap: 6px;
-        padding: 10px 0;
-      }
-      
-      .nav.show {
-        display: flex;
-      }
-      
-      .menu-btn {
-        display: inline-flex;
-      }
-      
-      .search {
-        order: 2;
-        max-width: 100%;
-      }
-      
-      .brand {
-        min-width: auto;
-      }
-      
-      .brand .titles h1 {
-        font-size: 20px;
-      }
-      
-      .brand .titles p {
-        font-size: 11px;
-      }
-      
-      .thumb {
-        height: 140px;
-      }
-    }
-    
-    @media (max-width: 600px) {
-      .container {
-        padding: 0 12px;
-      }
-      
-      .brand .logo {
-        width: 42px;
-        height: 42px;
-      }
-      
-      .search input {
-        padding: 8px 10px;
-      }
-      
-      .search button {
-        padding: 8px 10px;
-      }
-      
-      .modal-body {
-        padding: 14px;
-      }
-      
-      .modal-body h3 {
-        font-size: 18px;
-      }
-      
-      .steps {
-        font-size: 13px;
-      }
-      
-      .btn {
-        padding: 8px;
-        font-size: 12px;
-      }
-    }
-    
-    @media (max-width: 400px) {
-      .devbar {
-        font-size: 12px;
-      }
-      
-      .devbar img {
-        width: 18px;
-        height: 18px;
-      }
-      
-      .brand .logo {
-        width: 36px;
-        height: 36px;
-      }
-      
-      .brand .titles h1 {
-        font-size: 18px;
-      }
-      
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .modal-card {
-        margin: 20px 0;
-      }
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; margin: 0; padding: 0; scroll-behavior: smooth; }
+    body { font-family: 'Cairo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: radial-gradient(60% 80% at 100% 0%, #151516 0%, var(--bg) 55%) fixed; color: var(--text); line-height: 1.65; display: flex; flex-direction: column; min-height: 100vh; }
+    a { color: inherit; text-decoration: none; }/* Top Dev Bar */
+.devbar { background: linear-gradient(90deg, #0b0b0c, #1a1a1d); border-bottom: 1px solid var(--ring); padding: 0.5rem 0; text-align: center; font-weight: 700; letter-spacing: 0.3px; font-size: 14px; }
+.devbar a { display: inline-flex; gap: 0.5rem; align-items: center; text-decoration: none; color: var(--gold); }
+.devbar img { width: 22px; height: 22px; border-radius: 50%; }
+
+/* Header */
+header { position: sticky; top: 0; z-index: 1000; background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)); backdrop-filter: blur(8px); border-bottom: 1px solid var(--ring); }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+.head { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 12px 0; flex-wrap: wrap; }
+.brand { display: flex; gap: 12px; align-items: center; min-width: 180px; }
+.brand .logo { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.5), 0 0 18px rgba(212, 175, 55, 0.25); flex-shrink: 0; }
+.brand .logo img { width: 100%; height: 100%; object-fit: cover; }
+.brand .titles h1 { margin: 0; font-size: clamp(18px, 2.6vw, 28px); font-weight: 800; background: linear-gradient(90deg, var(--gold), #fff 70%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.2; }
+.brand .titles p { margin: 2px 0 0; color: var(--muted); font-weight: 600; font-size: 12px; }
+
+/* Nav */
+.nav { display: flex; gap: 8px; align-items: center; transition: all 0.3s ease; }
+.nav a { display: inline-flex; gap: 0.4rem; align-items: center; padding: 8px 10px; border-radius: 10px; text-decoration: none; color: var(--text); font-weight: 700; border: 1px solid transparent; font-size: 14px; white-space: nowrap; }
+.nav a:hover, .nav a.active { border-color: var(--ring); box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.08) inset; color: #fff; }
+.menu-btn { display: none; background: transparent; border: 0; color: var(--text); font-size: 22px; cursor: pointer; padding: 8px; }
+
+/* Search */
+.search { display: flex; align-items: center; gap: 0.35rem; flex-grow: 1; max-width: 500px; min-width: 150px; }
+.search input { width: 100%; background: linear-gradient(180deg, #0f0f11, #0b0b0c); border: 1px solid var(--ring); color: #fff; padding: 10px 12px; border-radius: 12px; font-weight: 600; outline: none; font-family: inherit; font-size: 14px; }
+.search button { background: var(--gold); color: #111; border: 0; border-radius: 12px; padding: 10px 12px; font-weight: 800; cursor: pointer; font-family: inherit; font-size: 14px; white-space: nowrap; }
+.search button:hover { background: var(--gold-2); color: #fff; }
+
+main { flex: 1; width: 100%; max-width: 1200px; margin: 20px auto; padding: 0 16px; }
+h2.section-title { display: flex; gap: 0.6rem; align-items: center; margin: 20px 0 12px; font-size: clamp(18px, 4vw, 22px); color: var(--gold); }
+
+/* Grid & Card */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.card { background: linear-gradient(180deg, #131316, #0f0f12); border: 1px solid var(--ring); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; position: relative; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(212, 175, 55, 0.18); }
+.card::after { content: ""; position: absolute; inset: 0; background: radial-gradient(120px 40px at 20% -10%, rgba(212, 175, 55, 0.22), transparent 60%), radial-gradient(160px 40px at 80% 110%, rgba(212, 175, 55, 0.18), transparent 60%); opacity: 0.8; pointer-events: none; }
+.thumb { height: 160px; overflow: hidden; border-bottom: 1px solid rgba(255, 255, 255, 0.06); position: relative; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.yt-badge { position: absolute; left: 8px; bottom: 8px; background: rgba(0,0,0,.6); border: 1px solid rgba(255,255,255,.2); padding: 4px 8px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; }
+.yt-badge i { color: #ff0000; }
+
+.body { padding: 12px; }
+.title { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.title h3 { margin: 0; font-size: 16px; color: var(--gold); line-height: 1.3; }
+.ver { font-size: 11px; color: var(--muted); white-space: nowrap; }
+.desc { margin: 8px 0 10px; color: #c9c9cf; font-size: 13px; min-height: 40px; line-height: 1.5; }
+.features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.chip { font-size: 11px; color: #111; background: linear-gradient(180deg, var(--gold), #f6e089); border: 1px solid rgba(0, 0, 0, 0.15); padding: 3px 8px; border-radius: 999px; font-weight: 800; }
+.cta { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--ring); background: #0f0f11; color: #fff; font-weight: 800; text-decoration: none; cursor: pointer; font-size: 13px; white-space: nowrap; }
+.btn.gold { background: var(--gold); color: #111; border-color: transparent; }
+.btn.gold:hover { background: var(--gold-2); color: #fff; }
+
+/* Modal */
+.modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.78); display: none; align-items: flex-start; justify-content: center; overflow: auto; z-index: 1200; padding: 20px; }
+.modal.open { display: flex; }
+.modal-card { background: #0e0e10; border: 1px solid var(--ring); border-radius: 16px; width: 100%; max-width: min(920px, 95vw); margin: 40px 0; overflow: hidden; box-shadow: 0 18px 52px rgba(0, 0, 0, 0.5); }
+.modal-hero { position: relative; }
+.modal-hero img { width: 100%; max-height: 280px; object-fit: cover; }
+.close { position: absolute; top: 10px; left: 10px; background: rgba(0, 0, 0, 0.5); border: 0; width: 36px; height: 36px; border-radius: 50%; color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.modal-body { padding: 16px; }
+.modal-body h3 { margin: 0 0 6px; color: var(--gold); font-size: 20px; }
+.version { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+.steps { background: #0f0f12; border: 1px solid var(--ring); border-radius: 10px; padding: 12px; margin-top: 12px; font-size: 14px; }
+.steps ol { margin: 8px 0 0; padding-right: 18px; }
+.steps li { margin-bottom: 6px; }
+
+/* Modal: Trailer area */
+.yt-wrap { margin: 12px 0; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); }
+.yt-aspect { width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.yt-aspect iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* Floating mini-player */
+.mini { position: fixed; right: 16px; bottom: 16px; width: min(360px, 92vw); z-index: 1300; display: none; }
+.mini.open { display: block; }
+.mini .mini-head { display: flex; align-items: center; justify-content: space-between; background: #0f0f12; border: 1px solid var(--ring); border-bottom: 0; border-radius: 16px 16px 0 0; padding: 8px 10px; font-weight: 800; }
+.mini .mini-body { background: #000; border: 1px solid var(--ring); border-top: 0; border-radius: 0 0 16px 16px; overflow: hidden; }
+.mini .mini-body .yt-aspect { width: 100%; }
+.mini .btn-icon { background: transparent; border: 0; color: #fff; cursor: pointer; font-size: 16px; }
+
+footer { border-top: 1px solid var(--ring); margin-top: 40px; padding: 20px 0; }
+footer .container { padding: 0 16px; color: #a7a7ad; text-align: center; }
+footer p { margin-bottom: 12px; font-size: 14px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .head { gap: 12px; padding: 8px 0; }
+  .nav { display: none; width: 100%; order: 3; flex-direction: column; gap: 6px; padding: 10px 0; }
+  .nav.show { display: flex; }
+  .menu-btn { display: inline-flex; }
+  .search { order: 2; max-width: 100%; }
+  .brand { min-width: auto; }
+  .brand .titles h1 { font-size: 20px; }
+  .brand .titles p { font-size: 11px; }
+  .thumb { height: 140px; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 12px; }
+  .brand .logo { width: 42px; height: 42px; }
+  .search input { padding: 8px 10px; }
+  .search button { padding: 8px 10px; }
+  .modal-body { padding: 14px; }
+  .modal-body h3 { font-size: 18px; }
+  .steps { font-size: 13px; }
+  .btn { padding: 8px; font-size: 12px; }
+}
+@media (max-width: 400px) {
+  .devbar { font-size: 12px; }
+  .devbar img { width: 18px; height: 18px; }
+  .brand .logo { width: 36px; height: 36px; }
+  .brand .titles h1 { font-size: 18px; }
+  .grid { grid-template-columns: 1fr; }
+  .modal-card { margin: 20px 0; }
+}
+
   </style>
 </head>
 <body>
@@ -646,10 +144,7 @@
       <img src="https://i.ibb.co/8Dmcbxhk/file-6.jpg" alt="المطور" />
       ⌯𝗠𝗢𝗨𝗔𝗔𝗗 - وجهة المطور
     </a>
-  </div>
-  
-  <!-- Header -->
-  <header>
+  </div>  <!-- Header -->  <header>
     <div class="container head">
       <div class="brand">
         <span class="logo"><img src="https://i.ibb.co/WvFCTC8p/file-8.jpg" alt="APK ARAB"></span>
@@ -657,74 +152,63 @@
           <h1>APK ARAB</h1>
           <p>أقوى التطبيقات والألعاب المعدلة للعرب</p>
         </span>
-      </div>
-      
-      <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
-      
-      <nav class="nav" id="nav">
-        <a href="#" data-section="home" class="active"><i class="fa-solid fa-home"></i> الرئيسية</a>
-        <a href="#" data-section="games"><i class="fa-solid fa-gamepad"></i> الألعاب</a>
-        <a href="#" data-section="apps"><i class="fa-solid fa-mobile-screen"></i> التطبيقات</a>
-        <a href="#" data-section="request"><i class="fa-solid fa-paper-plane"></i> طلب</a>
-      </nav>
-      
-      <div class="search">
-        <input id="search" placeholder="ابحث باسم التطبيق/اللعبة..." />
-        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-    </div>
-  </header>
-  
-  <!-- Sections -->
-  <main>
+      </div><button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+
+  <nav class="nav" id="nav">
+    <a href="#" data-section="home" class="active"><i class="fa-solid fa-home"></i> الرئيسية</a>
+    <a href="#" data-section="games"><i class="fa-solid fa-gamepad"></i> الألعاب</a>
+    <a href="#" data-section="apps"><i class="fa-solid fa-mobile-screen"></i> التطبيقات</a>
+    <a href="#" data-section="request"><i class="fa-solid fa-paper-plane"></i> طلب</a>
+  </nav>
+
+  <div class="search">
+    <input id="search" placeholder="ابحث باسم التطبيق/اللعبة..." />
+    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+</div>
+
+  </header>  <!-- Sections -->  <main>
     <section id="home" class="section">
       <h2 class="section-title"><i class="fa-solid fa-star"></i> المختارات</h2>
       <div class="grid" id="homeGrid"></div>
-    </section>
-    
-    <section id="games" class="section" style="display:none">
-      <h2 class="section-title"><i class="fa-solid fa-gamepad"></i> جميع الألعاب</h2>
-      <div class="grid" id="gamesGrid"></div>
-    </section>
-    
-    <section id="apps" class="section" style="display:none">
-      <h2 class="section-title"><i class="fa-solid fa-mobile-screen"></i> جميع التطبيقات</h2>
-      <div class="grid" id="appsGrid"></div>
-    </section>
-    
-    <section id="request" class="section" style="display:none">
-      <h2 class="section-title"><i class="fa-solid fa-paper-plane"></i> طلب تطبيق/لعبة</h2>
-      <div class="container" style="padding:0">
-        <form id="reqForm" style="display:grid;gap:12px;max-width:680px">
-          <input required placeholder="اسمك" style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%">
-          <input type="email" required placeholder="بريدك" style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%">
-          <select style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%">
-            <option value="app">تطبيق</option>
-            <option value="game">لعبة</option>
-          </select>
-          <input required placeholder="اسم التطبيق/اللعبة" style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%">
-          <textarea placeholder="وصف (اختياري)" rows="4" style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%"></textarea>
-          <button class="btn gold" type="submit"><i class="fa-solid fa-paper-plane"></i> إرسال الطلب</button>
-          <div id="reqMsg"></div>
-        </form>
-      </div>
-    </section>
-  </main>
-  
-  <!-- Footer -->
-  <footer>
+    </section><section id="games" class="section" style="display:none">
+  <h2 class="section-title"><i class="fa-solid fa-gamepad"></i> جميع الألعاب</h2>
+  <div class="grid" id="gamesGrid"></div>
+</section>
+
+<section id="apps" class="section" style="display:none">
+  <h2 class="section-title"><i class="fa-solid fa-mobile-screen"></i> جميع التطبيقات</h2>
+  <div class="grid" id="appsGrid"></div>
+</section>
+
+<section id="request" class="section" style="display:none">
+  <h2 class="section-title"><i class="fa-solid fa-paper-plane"></i> طلب تطبيق/لعبة</h2>
+  <div class="container" style="padding:0">
+    <form id="reqForm" style="display:grid;gap:12px;max-width:680px">
+      <input required placeholder="اسمك" style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%">
+      <input type="email" required placeholder="بريدك" style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%">
+      <select style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%">
+        <option value="app">تطبيق</option>
+        <option value="game">لعبة</option>
+      </select>
+      <input required placeholder="اسم التطبيق/اللعبة" style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%">
+      <textarea placeholder="وصف (اختياري)" rows="4" style="padding:12px;border-radius:12px;border:1px solid var(--ring);background:#0f0f11;color:#fff;width:100%"></textarea>
+      <button class="btn gold" type="submit"><i class="fa-solid fa-paper-plane"></i> إرسال الطلب</button>
+      <div id="reqMsg"></div>
+    </form>
+  </div>
+</section>
+
+  </main>  <!-- Footer -->  <footer>
     <div class="container">
       <p>© 2025 APK ARAB - جميع الحقوق محفوظة</p>
       <div style="margin-top:12px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
         <a class="btn" href="https://t.me/APK_1_ARAB" target="_blank"><i class="fa-brands fa-telegram"></i>APK ARAB</a>
-<a class="btn" href="https://t.me/IGX_World_Team" target="_blank"><i class="fa-brands fa-telegram"></i> IGX World</a>
+        <a class="btn" href="https://t.me/IGX_World_Team" target="_blank"><i class="fa-brands fa-telegram"></i> IGX World</a>
         <a class="btn" href="https://t.me/telecyb_er" target="_blank"><i class="fa-brands fa-telegram"></i> Telecyber</a>
       </div>
     </div>
-  </footer>
-  
-  <!-- App modal -->
-  <div class="modal" id="modal">
+  </footer>  <!-- App modal -->  <div class="modal" id="modal">
     <div class="modal-card">
       <div class="modal-hero">
         <img id="mImg" alt="" />
@@ -733,16 +217,17 @@
       <div class="modal-body">
         <h3 id="mTitle"></h3>
         <div class="version" id="mVer"></div>
+        <!-- Trailer in modal -->
+        <div id="mTrailer" class="yt-wrap" style="display:none">
+          <div class="yt-aspect"><iframe id="mTrailerFrame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        </div>
         <div id="mDesc" class="desc"></div>
         <div class="features" id="mFeats"></div>
         <div class="cta" id="mCtas"></div>
         <div class="steps" id="mSteps" style="display:none"></div>
       </div>
     </div>
-  </div>
-  
-  <!-- Ad modal -->
-  <div class="ad" id="ad">
+  </div>  <!-- Ad modal -->  <div class="ad" id="ad">
     <div class="ad-card">
       <div class="ad-head">
         <span><i class="fa-brands fa-telegram"></i> انضم لقنواتنا</span>
@@ -751,149 +236,121 @@
       <div class="ad-body">
         <p>آخر التطبيقات والألعاب المعدلة قبل الجميع!</p>
         <a class="tg" href="https://t.me/APK_1_ARAB" target="_blank"><i class="fa-brands fa-telegram"></i>APK ARAB</a>
-<a class="tg" href="https://t.me/IGX_World_Team" target="_blank"><i class="fa-brands fa-telegram"></i> IGX World</a>
+        <a class="tg" href="https://t.me/IGX_World_Team" target="_blank"><i class="fa-brands fa-telegram"></i> IGX World</a>
         <a class="tg" href="https://t.me/telecyb_er" target="_blank"><i class="fa-brands fa-telegram"></i> Telecyber</a>
       </div>
     </div>
-  </div>
-  
-  <script>
-    // ====== Data (محافظة على الروابط الأصلية) ======
-    const items = [
-      {
-        id: 'nba2k20',
-        type: 'game',
-        title: 'NBA 2K20 مهكرة',
-        rawTitle: 'NBA 2K20',
-        version: '98.0.2',
-        img: 'https://traidmod.org/wp-content/uploads/2025/05/DD-3-180x180.webp',
-        desc: 'لعبة كرة السلة الشهيرة NBA 2K20 مع مميزات معدلة',
-        features: ['أموال غير محدودة', 'جميع اللاعبين مفتوحين', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
-        apk: 'https://files.getmodsapk.com/ROOT//All%20Documents%20File/Folder%2016/NBA%202K20//NBA-2K20-v98.0.2-MOD-GMA-(Getmodsapk.com).apk',
-        size: '3GB',
-        obb: 'https://files.getmodsapk.com/ROOT/All%20Documents%20File/Folder%2016/NBA%202K20/NBA-2K20-v98.0.2-OBB-(Getmodsapk.com).zip'
-      },
-      {
-        id: 'classicpool3d',
-        type: 'game',
-        title: 'Classic Pool 3D مهكرة',
-        rawTitle: 'Classic Pool 3D',
-        version: '1.2.5',
-        img: 'https://traidmod.org/wp-content/uploads/2025/08/s-2-180x180.webp',
-        desc: 'لعبة بلياردو ثلاثية الأبعاد مع مميزات معدلة',
-        features: ['أموال غير محدودة', 'جميع الجداول مفتوحة', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
-        apk: 'https://s1.spiderdown.com/Classic%20Pool%203D/Classic%20Pool%203D-v1.2.5-mod-Liteapks.apk',
-        size: '45 MB'
-      },
-{
-  id: 'minecraft',
-  type: 'game',
-  title: 'Minecraft مهكر',
-  rawTitle: 'Minecraft',
-  version: '1.21.110.20',
-  img: 'https://traidapk.org/wp-content/uploads/2025/06/v-1-14-180x180.webp',
-  desc: 'لعبة ماينكرافت مع مميزات معدلة وخالية من القيود',
-  features: ['عدم الموت (Immortality)', 'جميع العناصر مفتوحة', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
-  apk: 'https://getmodsapk.com/dl-track/minecraft-mod-free-apk/168029',
-  size: '865.8 MB',
-},
-{
-  id: 'slitherio',
-  type: 'game',
-  title: 'Slither.io مهكرة',
-  rawTitle: 'Slither.io',
-  version: '2.96',
-  img: 'https://getmodsapk.com/storage/slither5.webp',
-  desc: 'لعبة الأفعى الشهيرة مع جميع الميزات المدفوعة مفعلة',
-  features: [
-    'أموال غير محدودة',
-    'جميع السكنات مفتوحة',
-    'لا يوجد إعلانات',
-    'إزالة التحقق من الرخصة',
-    'أداء محسن'
-  ],
-  apk: 'https://getmodsapk.com/dl-track/slitherio-mod-apk/170829',
-  size: '17 MB',
-  steps: [
-    'قم بتنزيل ملف APK',
-    'افتح الملف وقم بالتثبيت',
-    'إذا ظهرت رسالة "تثبيت تطبيقات غير معروفة"، اضغط على موافق',
-    'استمتع باللعبة مع جميع الميزات المميزة'
-  ]
-},
-{
-  id: 'driftforlife',
-  type: 'game',
-  title: 'Drift for Life مهكرة',
-  rawTitle: 'Drift for Life',
-  version: '1.5.5',
-  img: 'https://getmodsapk.com/storage/Drift%20for%20Life%20MOD%20APK%20(1)3.webp',
-  desc: 'لعبة سباق السيارات مع جميع الميزات المدفوعة مفعلة',
-  features: [
-    'أموال غير محدودة',
-    'ذهب غير محدود',
-    'جميع السيارات مفتوحة',
-    'لا يوجد إعلانات',
-    'إزالة التحقق من الرخصة'
-  ],
-  apk: 'https://getmodsapk.com/dl-track/drift-for-life-free-mod-apk/170818',
-  size: '1.6 GB',
-  steps: [
-    'تحميل الملف (1.6GB) قد يستغرق وقتاً',
-    'تثبيت APK بعد اكتمال التحميل',
-    'تفعيل "تثبيت تطبيقات غير معروفة" إذا لزم الأمر',
-    'فتح اللعبة والاستمتاع بجميع الميزات المميزة'
-  ]
-},
-{
-  id: 'offtheroad',
-  type: 'game',
-  title: 'Off The Road مهكرة',
-  rawTitle: 'Off The Road (OTR)',
-  version: '1.17.1',
-  img: 'https://getmodsapk.com/storage/media/2025/8/off-the-road-mod-apk-1.webp',
-  desc: 'لعبة قيادة مفتوحة العالم مع جميع الميزات المدفوعة مفعلة',
-  features: [
-    'أموال غير محدودة',
-    'جميع السيارات مفتوحة',
-    'إصدار VIP مفعل',
-    'لا يوجد إعلانات',
-    'خرائط مفتوحة بالكامل',
-    'وقود غير محدود'
-  ],
-  apk: 'https://getmodsapk.com/dl-track/off-the-road-otr-open-world-driving-mod-apk/162435',
-  size: '500 MB',
-  steps: [
-    'تحميل ملف APK (500MB)',
-    'تثبيت APK مباشرة',
-    'فتح اللعبة والاستمتاع بجميع الميزات'
-  ]
-}, 
-{
-  id: 'gtasanandreas',
-  type: 'game',
-  title: 'Grand Theft Auto: San Andreas مهكرة',
-  rawTitle: 'Grand Theft Auto: San Andreas',
-  version: '2.11.277',
-  img: 'https://getmodsapk.com/storage/GTA%20San%20Andreas%20MOD%20APK1.png',
-  desc: 'لعبة أكشن مفتوحة العالم مع جميع الميزات المدفوعة مفعلة',
-  features: [
-    'أموال غير محدودة',
-    'جميع المهام مفتوحة',
-    'شفرات مفعلة',
-    'لا يوجد إعلانات',
-    'خرائط مفتوحة بالكامل',
-    'مركبات غير محدودة'
-  ],
-  apk: 'https://getmodsapk.com/dl-track/gta-san-andreas-mod-apk/153076',
-  size: '2.6 GB',
-  steps: [
-    'تحميل ملف APK (2.6GB)',
-    'تثبيت APK مباشرة',
-    'فتح اللعبة والاستمتاع بجميع الميزات'
-  ]
-},
-{
+  </div>  <!-- Floating Mini-Player -->  <div id="mini" class="mini" aria-live="polite">
+    <div class="mini-head">
+      <span id="miniLabel"><i class="fa-brands fa-youtube"></i> مشاهدة التريلر</span>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <button class="btn-icon" id="miniOpenInYT" title="فتح في يوتيوب"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+        <button class="btn-icon" id="miniClose" title="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+    <div class="mini-body">
+      <div class="yt-aspect"><iframe id="miniFrame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    </div>
+  </div>  <script>
+ // ====== Data (مصفوفة بعرض قصير ومُرتب) ====== const items = [const items = [
+const items = [
+  {
+    id: 'nba2k20',
+    type: 'game',
+    title: 'NBA 2K20 مهكرة',
+    rawTitle: 'NBA 2K20',
+    version: '98.0.2',
+    img: 'https://traidmod.org/wp-content/uploads/2025/05/DD-3-180x180.webp',
+    desc: 'لعبة كرة السلة الشهيرة NBA 2K20 مع مميزات معدلة',
+    features: ['أموال غير محدودة', 'جميع اللاعبين مفتوحين', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
+    apk: 'https://files.getmodsapk.com/ROOT//All%20Documents%20File/Folder%2016/NBA%202K20//NBA-2K20-v98.0.2-MOD-GMA-(Getmodsapk.com).apk',
+    size: '3GB',
+    obb: 'https://files.getmodsapk.com/ROOT/All%20Documents%20File/Folder%2016/NBA%202K20/NBA-2K20-v98.0.2-OBB-(Getmodsapk.com).zip',
+    yt: 'cCkZGMmsyOE'
+  },
+  {
+    id: 'classicpool3d',
+    type: 'game',
+    title: 'Classic Pool 3D مهكرة',
+    rawTitle: 'Classic Pool 3D',
+    version: '1.2.5',
+    img: 'https://traidmod.org/wp-content/uploads/2025/08/s-2-180x180.webp',
+    desc: 'لعبة بلياردو ثلاثية الأبعاد مع مميزات معدلة',
+    features: ['أموال غير محدودة', 'جميع الجداول مفتوحة', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
+    apk: 'https://s1.spiderdown.com/Classic%20Pool%203D/Classic%20Pool%203D-v1.2.5-mod-Liteapks.apk',
+    size: '45 MB',
+    yt: 'ppgvrSgQdL4'
+  },
+  {
+    id: 'minecraft',
+    type: 'game',
+    title: 'Minecraft مهكر',
+    rawTitle: 'Minecraft',
+    version: '1.21.110.20',
+    img: 'https://traidapk.org/wp-content/uploads/2025/06/v-1-14-180x180.webp',
+    desc: 'لعبة ماينكرافت مع مميزات معدلة وخالية من القيود',
+    features: ['عدم الموت (Immortality)', 'جميع العناصر مفتوحة', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
+    apk: 'https://getmodsapk.com/dl-track/minecraft-mod-free-apk/168029',
+    size: '865.8 MB',
+    yt: '0vKS0FOYNok'
+  },
+  {
+    id: 'slitherio',
+    type: 'game',
+    title: 'Slither.io مهكرة',
+    rawTitle: 'Slither.io',
+    version: '2.96',
+    img: 'https://getmodsapk.com/storage/slither5.webp',
+    desc: 'لعبة الأفعى الشهيرة مع جميع الميزات المدفوعة مفعلة',
+    features: ['أموال غير محدودة', 'جميع السكنات مفتوحة', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة', 'أداء محسن'],
+    apk: 'https://getmodsapk.com/dl-track/slitherio-mod-apk/170829',
+    size: '17 MB',
+    steps: ['قم بتنزيل ملف APK', 'افتح الملف وقم بالتثبيت', 'إذا ظهرت رسالة "تثبيت تطبيقات غير معروفة", اضغط على موافق', 'استمتع باللعبة مع جميع الميزات المميزة'],
+    yt:'XrK7XMM-j_U'
+  },
+  {
+    id: 'driftforlife',
+    type: 'game',
+    title: 'Drift for Life مهكرة',
+    rawTitle: 'Drift for Life',
+    version: '1.5.5',
+    img: 'https://getmodsapk.com/storage/Drift%20for%20Life%20MOD%20APK%20(1)3.webp',
+    desc: 'لعبة سباق السيارات مع جميع الميزات المدفوعة مفعلة',
+    features: ['أموال غير محدودة', 'ذهب غير محدود', 'جميع السيارات مفتوحة', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
+    apk: 'https://getmodsapk.com/dl-track/drift-for-life-free-mod-apk/170818',
+    size: '1.6 GB',
+    steps: ['تحميل الملف (1.6GB) قد يستغرق وقتاً', 'تثبيت APK بعد اكتمال التحميل', 'تفعيل "تثبيت تطبيقات غير معروفة" إذا لزم الأمر', 'فتح اللعبة والاستمتاع بجميع الميزات المميزة'],
+    yt: ''
+  },
+  {
+    id: 'offtheroad',
+    type: 'game',
+    title: 'Off The Road مهكرة',
+    rawTitle: 'Off The Road (OTR)',
+    version: '1.17.1',
+    img: 'https://getmodsapk.com/storage/media/2025/8/off-the-road-mod-apk-1.webp',
+    desc: 'لعبة قيادة مفتوحة العالم مع جميع الميزات المدفوعة مفعلة',
+    features: ['أموال غير محدودة', 'جميع السيارات mفتوحة', 'إصدار VIP مفعل', 'لا يوجد إعلانات', 'خرائط مفتوحة بالكامل', 'وقود غير محدود'],
+    apk: 'https://getmodsapk.com/dl-track/off-the-road-otr-open-world-driving-mod-apk/162435',
+    size: '500 MB',
+    steps: ['تحميل ملف APK (500MB)', 'تثبيت APK مباشرة', 'فتح اللعبة والاستمتاع بجميع الميزات'],
+    yt: ''
+  },
+  {
+    id: 'gtasanandreas',
+    type: 'game',
+    title: 'Grand Theft Auto: San Andreas مهكرة',
+    rawTitle: 'Grand Theft Auto: San Andreas',
+    version: '2.11.277',
+    img: 'https://getmodsapk.com/storage/GTA%20San%20Andreas%20MOD%20APK1.png',
+    desc: 'لعبة أكشن مفتوحة العالم مع جميع الميزات المدفوعة مفعلة',
+    features: ['أموال غير محدودة', 'جميع المهام مفتوحة', 'شفرات مفعلة', 'لا يوجد إعلانات', 'خرائط مفتوحة بالكامل', 'مركبات غير محدودة'],
+    apk: 'https://getmodsapk.com/dl-track/gta-san-andreas-mod-apk/153076',
+    size: '2.6 GB',
+    steps: ['تحميل ملف APK (2.6GB)', 'تثبيت APK مباشرة', 'فتح اللعبة والاستمتاع بجميع الميزات'],
+    yt: ''
+  },
+  {
     id: 'nfsmw_mod',
     type: 'game',
     title: 'Need for Speed Most Wanted مهكرة',
@@ -901,187 +358,149 @@
     version: '1.3.128',
     img: 'https://getmodsapk.com/storage/Need-for-Speed-Most-Wanted-MOD-APK%20(4)2.webp',
     desc: 'لعبة سباقات السيارات الشهيرة Need for Speed مع مميزات معدلة',
-    features: [
-      'سيارات غير محدودة',
-      'مال غير محدود', 
-      'جميع المستويات مفتوحة',
-      'لا يوجد إعلانات',
-      'إزالة التحقق من الرخصة'
-    ],
+    features: ['سيارات غير محدودة', 'مال غير محدود', 'جميع المستويات مفتوحة', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
     apk: 'https://getmodsapk.com/dl-track/need-for-speed-most-wanted-mod-apk/51899',
     size: '19MB',
-    obb: 'https://getmodsapk.com/dl-track/need-for-speed-most-wanted-mod-apk/51900'
+    obb: 'https://getmodsapk.com/dl-track/need-for-speed-most-wanted-mod-apk/51900',
+    yt: ''
   },
-{
-  id: 'realracing3',
-  type: 'game',
-  title: 'Real Racing 3 مهكرة',
-  rawTitle: 'Real Racing 3',
-  version: '13.5.1',
-  img: 'https://getmodsapk.com/storage/Real%20Racing%203%20mod%20apk5.webp',
-  desc: 'لعبة سباقات واقعية مع جميع المحتويات مفتوحة ومال وذهب غير محدود',
-  features: [
-    'ذهب غير محدود',
-    'مال غير محدود',
-    'جميع السيارات مفتوحة',
-    'جميع المسارات مفتوحة',
-    'لا يوجد إعلانات',
-    'إزالة التحقق من الرخصة'
-  ],
-  apk: 'https://getmodsapk.com/dl-track/5104-real-racing-3-mod-apk/112134',
-  size: '70 MB',
-  steps: [
-    'قم بتنزيل ملف APK',
-    'افتح الملف وقم بالتثبيت',
-    'إذا ظهرت رسالة "تثبيت تطبيقات غير معروفة"، اضغط على موافق',
-    'استمتع باللعبة مع جميع الميزات المميزة'
-  ]
-}, 
-      {
-        id: 'multipleaccounts',
-        type: 'app',
-        title: 'Multiple Accounts معدل',
-        rawTitle: 'Multiple Accounts',
-        version: '4.1.6',
-        img: 'https://traidmod.net/wp-content/uploads/2025/07/Multiple-Accounts-Logo-240x240.webp',
-        desc: 'تطبيق لإنشاء حسابات متعددة للتطبيقات مع مميزات VIP المعدلة',
-        features: ['إصدار VIP مفعل', 'جميع المميزات المدفوعة', 'لا يوجد إعلانات', 'دعم متعدد الحسابات'],
-        apk: 'https://getmodsapk.com/dl-track/multiple-accounts-mod-apk/137274(Getmodsapk.com).apkW459JFehxW33Xkw5sJjCYyqK6ERG1Q9vP9VgUiWapBtK4JgxZT8Z-CYFBw==?uid=1860781896&filename=Multiple_Accounts_v4.1.6_Vip_%5BTraidMod.Net%5D.apk&disposition=attachment&hash=&limit=0&content_type=application%2Fvnd.android.package-archive&owner_uid=1860781896&fsize=38474083&hid=3b05127540fe1181be6ff2176e252898&media_type=unknown&tknv=v3&etag=8c26d680c81a76490741f7ab7a39bde8&ts=63c931296dd80&s=4130dac332bae8512ed45205bf663a5e8a08b01311976947866ae4970559c39e&pb=U2FsdGVkX1_1Ax-A1aYtp49TxKhkCFFBPKZMDSCOrMX7KruBZJ0FMFJrdPxesVYfprbBMghWUHm4As7LDybTVCxN-2fMUtZ4B0lyNSAxZBg',
-        size: '38.5 MB',
-        assist: 'https://s384vla.storage.yandex.net/rdisk/dc4508a330830a309d479df06dbd75a247c9a35eeb98ca9ca7917043a949b537/68a1236b/qaKbh616M1BhgqE6IYM47X4wAFVmS98ucPFhc4XMh9JpfTv5w7ZuTe7gcLVtaq7eUm7pMcGeIXtgwKZ3VfHG7Q==?uid=1860781896&filename=Multiple_Accounts_Assist_v3.0.6_%5BTraidMod.Net%5D.apk&disposition=attachment&hash=&limit=0&content_type=application%2Fvnd.android.package-archive&owner_uid=1860781896&fsize=482889&hid=584d116df310ec6f9fb297e071783426&media_type=unknown&tknv=v3&etag=2d54d4a66345348092d5909191f14acc&ts=63c84c6af70c0&s=b674ade9ced2eade00d88ee74699ea1ab324a611ce8094083d76764e4772895b&pb=U2FsdGVkX19yaG1peys7OIOZMIGpgJ3xw16gYLuiIo8E5ptE_43qM5-eYoGMrlhY972XPwqv_RRw-nj-Xld7plQXSadpDpZ80tc80jO1kF0'
-      },
-      {
-        id: 'btkeyboardmouse',
-        type: 'app',
-        title: 'Bluetooth Keyboard & Mouse معدل',
-        rawTitle: 'Bluetooth Keyboard & Mouse',
-        version: '6.11.0',
-        img: 'https://traidmod.net/wp-content/uploads/2025/07/Bluetooth-Keyboard-Mouse-Logo-240x240.webp',
-        desc: 'تطبيق للتحكم في الأجهزة عن طريق لوحة المفاتيح والفأرة عبر البلوتوث مع مميزات معدلة',
-        features: ['إصدار Premium', 'جميع المميزات مفعلة', 'لا يوجد إعلانات', 'واجهة محسنة'],
-        apk: 'https://s1.spiderdown.com/Bluetooth%20Keyboard%20Mouse/Bluetooth%20Keyboard%20%26%20Mouse%20v6.11.0%20%28Paid%29.apk',
-        size: '6.3 MB'
-      }, 
-      {
-  id: 'alightmotion',
-  type: 'app',
-  title: 'Alight Motion Pro معدل',
-  rawTitle: 'Alight Motion',
-  version: '5.0.276',
-  img: 'https://traidmod.net/wp-content/uploads/2023/09/Alight-Motion-LOGO-240x240.webp',
-  desc: 'أقوى تطبيق لتحرير الفيديو والرسوم المتحركة مع جميع مميزات Pro مفعلة',
-  features: [
-    'إصدار Pro مفعل بالكامل',
-    'جميع المؤثرات والطبقات متاحة',
-    'لا يوجد إعلانات',
-    'تصدير بدقة عالية',
-    'إزالة علامة المياه',
-    'دعم جميع الأجهزة'
-  ],
-  apk: 'https://getmodsapk.com/dl-track/alight-motion-premium-mod-apk/162939TtCyA1qLVErPwu9aQIkkbzAICXS9IbrI7x-oL8N-5527Z23lPEnpk3QrQ==?uid=1860781896&filename=Alight_Motion_v5.0.276_Pro_%5BTraidMod.Net%5D.apk&disposition=attachment&hash=&limit=0&content_type=application%2Fvnd.android.package-archive&owner_uid=1860781896&fsize=111963823&hid=21e78bf2729989a61855118f03aa77d7&media_type=unknown&tknv=v3&etag=086f064981d35fc3b21dca88d0175af9&ts=63c92931850c0&s=eb59b2591bb2937cefbfddae219607e6cb46470be0bbfcdb40793fbde5266b00&pb=U2FsdGVkX18w3K_x6AX9vVGLkpc5oowQuPcUOfikt0Kf1IJtWf9ypWDp-wMf0J3L-jzfjAKxuMWWUXmG_t_DdJ7yLVlvOU1kqepo2e2b0sM',
-  size: '106.8 MB',
-  steps: [
-    'قم بتنزيل ملف APK',
-    'افتح الملف وقم بتثبيت التطبيق',
-    'إذا ظهرت رسالة "تثبيت كتطبيق غير معروف"، اضغط على موافق',
-    'افتح التطبيق واستمتع بجميع الميزات المميزة'
-  ]
-},
-{
-  id: 'vphonegaga',
-  type: 'app',
-  title: 'VPhoneGaga معدل',
-  rawTitle: 'VPhoneGaga',
-  version: '3.8.5',
-  img: 'https://getmodsapk.com/storage/VPhoneGaga%20MOD%20APK%20(1)2.webp',
-  desc: 'تطبيق محاكي أندرويد خفيف وسريع مع مميزات معدلة',
-  features: ['إصدار Pro مفعل', 'لا يوجد إعلانات', 'أداء محسّن', 'دعم الألعاب الثقيلة'],
-  apk: 'https://s1.spiderdown.com/VPhoneGaga/VPhoneGaGa%20v3.8.5%20%28Mod%29.apk',
-  size: '900 MB'
-},
-{
-  id: 'aichat4o',
-  type: 'app',
-  title: 'AI Chat 4o Pro معدل',
-  rawTitle: 'AI Chat 4o (Chat GPT)',
-  version: '5.2.0.0',
-  img: 'https://getmodsapk.com/storage/media/2025/5/chatgpt-premium-mod-apk-5-2.webp',
-  desc: 'تطبيق الدردشة بالذكاء الاصطناعي مع إصدار Premium مفعل بالكامل',
-  features: [
-    'إصدار Premium مفعل',
-    'دردشة ذكاء اصطناعي متقدمة', 
-    'لا يوجد إعلانات',
-    'دعم جميع اللغات',
-    'واجهة محسنة'
-  ],
-  apk: 'https://s1.spiderdown.com/ChatGPT%20AI%20Chat/Ai%20Chatbot%20-%20Pro%20v5.1.0.2%20%28Premium%29.apk',
-  size: '70MB',
-  steps: [
-    'قم بتنزيل وتركيب APK',
-    'فتح التطبيق والبدء فوراً بدون تسجيل دخول',
-    'الاستمتاع بجميع ميزات Premium'
-  ]
-},
-{
-  "id": "spotifypremium",
-  "type": "app",
-  "title": "Spotify Premium مهكر",
-  "rawTitle": "Spotify - Music and Podcasts",
-  "version": "9.0.74.823",
-  "img": "https://spotifypro.com.co/wp-content/uploads/2024/12/cropped-spotify-1.png",
-  "desc": "تطبيق الموسيقى والبودكاست مع ميزات الاشتراك المدفوع مفعلة",
-  "features": [
-    "لا يوجد إعلانات",
-    "تشغيل غير محدود",
-    "قفز غير محدود بين الأغاني",
-    "اختيار أي أغنية",
-    "جودة صوت عالية",
-    "تنزيل غير محدود"
-  ],
-  "apk": "https://s1.spiderdown.com/Spotify/Spotify%20v9.0.74.823%20%28Clone%29.apk",
-  "size": "Varies by device",
-  "steps": [
-    "تحميل ملف APK",
-    "إلغاء تثبيت أي نسخة موجودة من سبوتيفاي",
-    "تثبيت APK",
-    "فتح التطبيق والاستمتاع بالميزات المميزة"
-  ]
-}, 
-{
-  "id": "hipaint_mod",
-  "type": "app",
-  "title": "HiPaint Sketch Draw Pro معدل",
-  "rawTitle": "HiPaint Sketch Draw",
-  "version": "6.0.5",
-  "img": "https://apk.dog/images:bz1ldW51dGQmbD0yYXgmaD1wbmcmZj1HbGk5MCZpPTc",
-  "desc": "تطبيق رسم احترافي مع إصدار Premium مفعل بالكامل",
-  "features": [
-    "إصدار Premium مفعل",
-    "جميع الفرش والأدوات مفتوحة",
-    "لا يوجد إعلانات",
-    "تصدير بدقة عالية بدون علامة مائية",
-    "واجهة محسنة"
-  ],
-  "apk": "https://s1.spiderdown.com/HiPaint%20Sketch%20Draw/HiPaint%20v5.1.10%20%28Premium%29.apk",
-  "size": "97MB",
-  "steps": [
-    "قم بتنزيل وتركيب APK",
-    "فتح التطبيق والبدء فوراً بدون تسجيل دخول",
-    "الاستمتاع بجميع ميزات Premium"
-  ]
-}
-    ];
+  {
+    id: 'realracing3',
+    type: 'game',
+    title: 'Real Racing 3 مهكرة',
+    rawTitle: 'Real Racing 3',
+    version: '13.5.1',
+    img: 'https://getmodsapk.com/storage/Real%20Racing%203%20mod%20apk5.webp',
+    desc: 'لعبة سباقات واقعية مع جميع المحتويات مفتوحة ومال وذهب غير محدود',
+    features: ['ذهب غير محدود', 'مال غير محدود', 'جميع السيارات مفتوحة', 'جميع المسارات مفتوحة', 'لا يوجد إعلانات', 'إزالة التحقق من الرخصة'],
+    apk: 'https://getmodsapk.com/dl-track/5104-real-racing-3-mod-apk/112134',
+    size: '70 MB',
+    steps: ['قم بتنزيل ملف APK', 'افتح الملف وقم بالتثبيت', 'إذا ظهرت رسالة "تثبيت تطبيقات غير معروفة", اضغط على موافق', 'استمتع باللعبة مع جميع الميزات المميزة'],
+    yt: ''
+  },
+  {
+    id: 'multipleaccounts',
+    type: 'app',
+    title: 'Multiple Accounts معدل',
+    rawTitle: 'Multiple Accounts',
+    version: '4.1.6',
+    img: 'https://traidmod.net/wp-content/uploads/2025/07/Multiple-Accounts-Logo-240x240.webp',
+    desc: 'تطبيق لإنشاء حسابات متعددة للتطبيقات مع مميزات VIP المعدلة',
+    features: ['إصدار VIP مفعل', 'جميع المميزات المدفوعة', 'لا يوجد إعلانات', 'دعم متعدد الحسابات'],
+    apk: 'https://getmodsapk.com/dl-track/multiple-accounts-mod-apk/137274(Getmodsapk.com).apkW459JFehxW33Xkw5sJjCYyqK6ERG1Q9vP9VgUiWapBtK4JgxZT8Z-CYFBw==?uid=1860781896&filename=Multiple_Accounts_v4.1.6_Vip_%5BTraidMod.Net%5D.apk&disposition=attachment&hash=&limit=0&content_type=application%2Fvnd.android.package-archive&owner_uid=1860781896&fsize=38474083&hid=3b05127540fe1181be6ff2176e252898&media_type=unknown&tknv=v3&etag=8c26d680c81a76490741f7ab7a39bde8&ts=63c931296dd80&s=4130dac332bae8512ed45205bf663a5e8a08b01311976947866ae4970559c39e&pb=U2FsdGVkX1_1Ax-A1aYtp49TxKhkCFFBPKZMDSCOrMX7KruBZJ0FMFJrdPxesVYfprbBMghWUHm4As7LDybTVCxN-2fMUtZ4B0lyNSAxZBg',
+    size: '38.5 MB',
+    assist: 'https://s384vla.storage.yandex.net/rdisk/dc4508a330830a309d479df06dbd75a247c9a35eeb98ca9ca7917043a949b537/68a1236b/qaKbh616M1BhgqE6IYM47X4wAFVmS98ucPFhc4XMh9JpfTv5w7ZuTe7gcLVtaq7eUm7pMcGeIXtgwKZ3VfHG7Q==?uid=1860781896&filename=Multiple_Accounts_Assist_v3.0.6_%5BTraidMod.Net%5D.apk&disposition=attachment&hash=&limit=0&content_type=application%2Fvnd.android.package-archive&owner_uid=1860781896&fsize=482889&hid=584d116df310ec6f9fb297e071783426&media_type=unknown&tknv=v3&etag=2d54d4a66345348092d5909191f14acc&ts=63c84c6af70c0&s=b674ade9ced2eade00d88ee74699ea1ab324a611ce8094083d76764e4772895b&pb=U2FsdGVkX19yaG1peys7OIOZMIGpgJ3xw16gYLuiIo8E5ptE_43qM5-eYoGMrlhY972XPwqv_RRw-nj-Xld7plQXSadpDpZ80tc80jO1kF0',
+    yt: ''
+  },
+  {
+    id: 'btkeyboardmouse',
+    type: 'app',
+    title: 'Bluetooth Keyboard & Mouse معدل',
+    rawTitle: 'Bluetooth Keyboard & Mouse',
+    version: '6.11.0',
+    img: 'https://traidmod.net/wp-content/uploads/2025/07/Bluetooth-Keyboard-Mouse-Logo-240x240.webp',
+    desc: 'تطبيق للتحكم في الأجهزة عن طريق لوحة المفاتيح والفأرة عبر البلوتوث مع مميزات معدلة',
+    features: ['إصدار Premium', 'جميع المميزات مفعلة', 'لا يوجد إعلانات', 'واجهة محسنة'],
+    apk: 'https://s1.spiderdown.com/Bluetooth%20Keyboard%20Mouse/Bluetooth%20Keyboard%20%26%20Mouse%20v6.11.0%20%28Paid%29.apk',
+    size: '6.3 MB',
+    yt: ''
+  },
+  {
+    id: 'alightmotion',
+    type: 'app',
+    title: 'Alight Motion Pro معدل',
+    rawTitle: 'Alight Motion',
+    version: '5.0.276',
+    img: 'https://traidmod.net/wp-content/uploads/2023/09/Alight-Motion-LOGO-240x240.webp',
+    desc: 'أقوى تطبيق لتحرير الفيديو والرسوم المتحركة مع جميع مميزات Pro مفعلة',
+    features: ['إصدار Pro مفعل بالكامل', 'جميع المؤثرات والطبقات متاحة', 'لا يوجد إعلانات', 'تصدير بدقة عالية', 'إزالة علامة المياه', 'دعم جميع الأجهزة'],
+    apk: 'https://getmodsapk.com/dl-track/alight-motion-premium-mod-apk/162939TtCyA1qLVErPwu9aQIkkbzAICXS9IbrI7x-oL8N-5527Z23lPEnpk3QrQ==?uid=1860781896&filename=Alight_Motion_v5.0.276_Pro_%5BTraidMod.Net%5D.apk&disposition=attachment&hash=&limit=0&content_type=application%2Fvnd.android.package-archive&owner_uid=1860781896&fsize=111963823&hid=21e78bf2729989a61855118f03aa77d7&media_type=unknown&tknv=v3&etag=086f064981d35fc3b21dca88d0175af9&ts=63c92931850c0&s=eb59b2591bb2937cefbfddae219607e6cb46470be0bbfcdb40793fbde5266b00&pb=U2FsdGVkX18w3K_x6AX9vVGLkpc5oowQuPcUOfikt0Kf1IJtWf9ypWDp-wMf0J3L-jzfjAKxuMWWUXmG_t_DdJ7yLVlvOU1kqepo2e2b0sM',
+    size: '106.8 MB',
+    steps: ['قم بتنزيل ملف APK', 'افتح الملف وقم بتثبيت التطبيق', 'إذا ظهرت رسالة "تثبيت كتطبيق غير معروف", اضغط على موافق', 'افتح التطبيق واستمتع بجميع الميزات المميزة'],
+    yt: ''
+  },
+  {
+    id: 'vphonegaga',
+    type: 'app',
+    title: 'VPhoneGaga معدل',
+    rawTitle: 'VPhoneGaga',
+    version: '3.8.5',
+    img: 'https://getmodsapk.com/storage/VPhoneGaga%20MOD%20APK%20(1)2.webp',
+    desc: 'تطبيق محاكي أندرويد خفيف وسريع مع مميزات معدلة',
+    features: ['إصدار Pro مفعل', 'لا يوجد إعلانات', 'أداء محسّن', 'دعم الألعاب الثقيلة'],
+    apk: 'https://s1.spiderdown.com/VPhoneGaga/VPhoneGaGa%20v3.8.5%20%28Mod%29.apk',
+    size: '900 MB',
+    yt: ''
+  },
+  {
+    id: 'aichat4o',
+    type: 'app',
+    title: 'AI Chat 4o Pro معدل',
+    rawTitle: 'AI Chat 4o (Chat GPT)',
+    version: '5.2.0.0',
+    img: 'https://getmodsapk.com/storage/media/2025/5/chatgpt-premium-mod-apk-5-2.webp',
+    desc: 'تطبيق الدردشة بالذكاء الاصطناعي مع إصدار Premium مفعل بالكامل',
+    features: ['إصدار Premium مفعل', 'دردشة ذكاء اصطناعي متقدمة', 'لا يوجد إعلانات', 'دعم جميع اللغات', 'واجهة محسنة'],
+    apk: 'https://s1.spiderdown.com/ChatGPT%20AI%20Chat/Ai%20Chatbot%20-%20Pro%20v5.1.0.2%20%28Premium%29.apk',
+    size: '70MB',
+    steps: ['قم بتنزيل وتركيب APK', 'فتح التطبيق والبدء فوراً بدون تسجيل دخول', 'الاستمتاع بجميع ميزات Premium'],
+    yt: ''
+  },
+  {
+    id: 'spotifypremium',
+    type: 'app',
+    title: 'Spotify Premium مهكر',
+    rawTitle: 'Spotify - Music and Podcasts',
+    version: '9.0.74.823',
+    img: 'https://spotifypro.com.co/wp-content/uploads/2024/12/cropped-spotify-1.png',
+    desc: 'تطبيق الموسيقى والبودكاست مع ميزات الاشتراك المدفوع مفعلة',
+    features: ['لا يوجد إعلانات', 'تشغيل غير محدود', 'قفز غير محدود بين الأغاني', 'اختيار أي أغنية', 'جودة صوت عالية', 'تنزيل غير محدود'],
+    apk: 'https://s1.spiderdown.com/Spotify/Spotify%20v9.0.74.823%20%28Clone%29.apk',
+    size: 'Varies by device',
+    steps: ['تحميل ملف APK', 'إلغاء تثبيت أي نسخة موجودة من سبوتيفاي', 'تثبيت APK', 'فتح التطبيق والاستمتاع بالميزات المميزة'],
+    yt: ''
+  },
+  {
+    id: 'hipaint_mod',
+    type: 'app',
+    title: 'HiPaint Sketch Draw Pro معدل',
+    rawTitle: 'HiPaint Sketch Draw',
+    version: '6.0.5',
+    img: 'https://apk.dog/images:bz1ldW51dGQmbD0yYXgmaD1wbmcmZj1HbGk5MCZpPTc',
+    desc: 'تطبيق رسم احترافي مع إصدار Premium مفعل بالكامل',
+    features: ['إصدار Premium مفعل', 'جميع الفرش والأدوات مفتوحة', 'لا يوجد إعلانات', 'تصدير بدقة عالية بدون علامة مائية', 'واجهة محسنة'],
+    apk: 'https://s1.spiderdown.com/HiPaint%20Sketch%20Draw/HiPaint%20v5.1.10%20%28Premium%29.apk',
+    size: '97MB',
+    steps: ['قم بتنزيل وتركيب APK', 'فتح التطبيق والبدء فوراً بدون تسجيل دخول', 'الاستمتاع بجميع ميزات Premium'],
+    yt: ''
+  }
+];
 
-    // ====== Render helpers ======
+
+
+
+
+
+
+    // ====== Helpers ======
     const homeGrid = document.getElementById('homeGrid');
     const gamesGrid = document.getElementById('gamesGrid');
     const appsGrid = document.getElementById('appsGrid');
 
+    function youTubeThumb(yt) { return yt ? `https://i.ytimg.com/vi/${yt}/hqdefault.jpg` : null; }
+    function youTubeEmbed(yt, autoplay = 1) { return `https://www.youtube-nocookie.com/embed/${yt}?autoplay=${autoplay}&rel=0&modestbranding=1&playsinline=1`; }
+    function youTubeSearch(q) { return `https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`; }
+
     function cardTemplate(it) {
       const feats = it.features.slice(0, 2).map(f => `<span class="chip">${f}</span>`).join('');
+      const hasYT = !!it.yt;
+      const badge = hasYT ? `<span class="yt-badge"><i class="fa-brands fa-youtube"></i> تريلر</span>` : '';
       return `
-      <article class="card" data-type="${it.type}" data-title="${(it.title + " " + it.rawTitle).toLowerCase()}">
-        <div class="thumb"><img src="${it.img}" alt="${it.rawTitle}" loading="lazy"></div>
+      <article class="card" data-id="${it.id}" data-type="${it.type}" data-title="${(it.title + " " + it.rawTitle).toLowerCase()}">
+        <div class="thumb">
+          <img src="${it.img}" alt="${it.rawTitle}" loading="lazy">
+          ${badge}
+        </div>
         <div class="body">
           <div class="title">
             <h3>${it.title}</h3>
@@ -1092,19 +511,19 @@
           <div class="cta">
             <a class="btn gold" href="${it.apk}" target="_blank"><i class="fa-solid fa-download"></i> تحميل ${it.size ? `(${it.size})` : ''}</a>
             <button class="btn" data-open="${it.id}"><i class="fa-solid fa-circle-info"></i> تفاصيل</button>
+            <button class="btn" data-trailer="${it.id}"><i class="fa-brands fa-youtube"></i> تريلر</button>
           </div>
         </div>
       </article>`;
     }
 
     function mount() {
-      // Home: أول عنصرين من الألعاب + أول عنصرين من التطبيقات
       const games = items.filter(i => i.type === 'game');
       const apps = items.filter(i => i.type === 'app');
       homeGrid.innerHTML = [...games.slice(0, 100000), ...apps.slice(0, 100000)].map(cardTemplate).join('');
       gamesGrid.innerHTML = games.map(cardTemplate).join('');
       appsGrid.innerHTML = apps.map(cardTemplate).join('');
-      bindDetailButtons();
+      bindButtons();
     }
 
     // ====== Modal logic ======
@@ -1116,29 +535,33 @@
     const mFeats = document.getElementById('mFeats');
     const mCtas = document.getElementById('mCtas');
     const mSteps = document.getElementById('mSteps');
+    const mTrailer = document.getElementById('mTrailer');
+    const mTrailerFrame = document.getElementById('mTrailerFrame');
 
     function openModal(it) {
-      mImg.src = it.img;
-      mImg.alt = it.rawTitle;
-      mTitle.textContent = it.rawTitle;
-      mVer.textContent = 'الإصدار: ' + it.version;
-      mDesc.textContent = it.desc;
-      mFeats.innerHTML = it.features.map(f => `<span class="chip">${f}</span>`).join('');
+      mImg.src = it.img; mImg.alt = it.rawTitle; mTitle.textContent = it.rawTitle; mVer.textContent = 'الإصدار: ' + it.version; mDesc.textContent = it.desc; mFeats.innerHTML = it.features.map(f => `<span class="chip">${f}</span>`).join('');
 
-      let ctas = `<a class="btn gold" href="${it.apk}" target="_blank"><i class="fa-solid fa-download"></i> تحميل ${it.type === 'app' && it.title.includes('Accounts') ? 'التطبيق الرئيسي' : 'APK'} ${it.size ? `(${it.size})` : ''}</a>`;
-      if (it.obb) {
-        ctas += ` <a class="btn" href="${it.obb}" target="_blank"><i class="fa-solid fa-file-zipper"></i> تحميل OBB</a>`;
-      }
-      if (it.assist) {
-        ctas += ` <a class="btn" href="${it.assist}" target="_blank"><i class="fa-solid fa-puzzle-piece"></i> الأداة المساعدة</a>`;
-      }
+      let ctas = `<a class=\"btn gold\" href=\"${it.apk}\" target=\"_blank\"><i class=\"fa-solid fa-download\"></i> تحميل ${it.type === 'app' && it.title.includes('Accounts') ? 'التطبيق الرئيسي' : 'APK'} ${it.size ? `(${it.size})` : ''}</a>`;
+      if (it.obb) { ctas += ` <a class=\"btn\" href=\"${it.obb}\" target=\"_blank\"><i class=\"fa-solid fa-file-zipper\"></i> تحميل OBB</a>`; }
+      if (it.assist) { ctas += ` <a class=\"btn\" href=\"${it.assist}\" target=\"_blank\"><i class=\"fa-solid fa-puzzle-piece\"></i> الأداة المساعدة</a>`; }
+      ctas += ` <button class=\"btn\" data-trailer=\"${it.id}\"><i class=\"fa-brands fa-youtube\"></i> تريلر</button>`;
       mCtas.innerHTML = ctas;
 
+      // Trailer in modal
+      if (it.yt) {
+        mTrailer.style.display = 'block';
+        mTrailerFrame.src = youTubeEmbed(it.yt, 0); // لا نشغل تلقائي داخل التفاصيل
+      } else {
+        mTrailer.style.display = 'none';
+        mTrailerFrame.removeAttribute('src');
+      }
+
+      // Steps
       if (it.obb || it.assist) {
         mSteps.style.display = 'block';
         mSteps.innerHTML = `
-          <strong><i class="fa-solid fa-circle-exclamation"></i> تعليمات التثبيت:</strong>
-          <ol style="margin:8px 0 0;padding-right:18px">
+          <strong><i class=\"fa-solid fa-circle-exclamation\"></i> تعليمات التثبيت:</strong>
+          <ol style=\"margin:8px 0 0;padding-right:18px\">
             ${it.obb ? '<li>قم بتنزيل ملف APK وملف OBB.</li>' : '<li>قم بتنزيل التطبيق الرئيسي.</li>'}
             <li>ثبّت ملف الـ APK أولاً.</li>
             ${it.obb ? '<li>انسخ مجلد OBB إلى المسار: Android/obb/اسم_الحزمة.</li>' : ''}
@@ -1154,28 +577,49 @@
       document.body.style.overflow = 'hidden';
     }
 
-    function bindDetailButtons() {
+    document.getElementById('closeM').addEventListener('click', () => { modal.classList.remove('open'); document.body.style.overflow = 'auto'; stopMini(); stopModalTrailer(); });
+    modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('open'); document.body.style.overflow = 'auto'; stopMini(); stopModalTrailer(); } });
+
+    function stopModalTrailer() { mTrailerFrame.removeAttribute('src'); }
+
+    // ====== Floating mini-player ======
+    const mini = document.getElementById('mini');
+    const miniFrame = document.getElementById('miniFrame');
+    const miniLabel = document.getElementById('miniLabel');
+    const miniOpenInYT = document.getElementById('miniOpenInYT');
+    document.getElementById('miniClose').addEventListener('click', stopMini);
+
+    function openMini(it) {
+      if (it.yt) {
+        miniFrame.src = youTubeEmbed(it.yt, 1);
+        miniOpenInYT.onclick = () => window.open(`https://www.youtube.com/watch?v=${it.yt}`, '_blank');
+        miniLabel.innerHTML = `<i class=\"fa-brands fa-youtube\"></i> ${it.rawTitle}`;
+        mini.classList.add('open');
+      } else {
+        // لا يوجد رقم فيديو: فتح نتائج بحث مباشرة
+        window.open(youTubeSearch(it.rawTitle + ' trailer'), '_blank');
+      }
+    }
+    function stopMini() { mini.classList.remove('open'); miniFrame.removeAttribute('src'); }
+
+    // ====== Search & Bindings ======
+    function bindButtons() {
       document.querySelectorAll('[data-open]').forEach(btn => {
         btn.addEventListener('click', () => {
           const it = items.find(i => i.id === btn.dataset.open);
           if (it) openModal(it);
         });
       });
+      document.querySelectorAll('[data-trailer]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const it = items.find(i => i.id === btn.dataset.trailer);
+          if (!it) return;
+          // لو التريلر ظاهر في المودال، نشغّل الميني بلاير للتجربة السريعة
+          openMini(it);
+        });
+      });
     }
 
-    document.getElementById('closeM').addEventListener('click', () => {
-      modal.classList.remove('open');
-      document.body.style.overflow = 'auto';
-    });
-    
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('open');
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    // ====== Nav switching ======
     const nav = document.getElementById('nav');
     nav.addEventListener('click', (e) => {
       const a = e.target.closest('a[data-section]');
@@ -1187,50 +631,31 @@
       document.querySelectorAll('main .section').forEach(s => s.style.display = 'none');
       document.getElementById(id).style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      
-      // Close mobile menu after selection
-      if (window.innerWidth <= 900) {
-        nav.style.display = 'none';
-      }
+      if (window.innerWidth <= 900) { nav.style.display = 'none'; }
     });
 
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
-    menuBtn.addEventListener('click', () => {
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    });
-
-    // Close menu when clicking outside
+    menuBtn.addEventListener('click', () => { nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex'; });
     document.addEventListener('click', (e) => {
-      if (window.innerWidth <= 900 && 
-          !e.target.closest('#nav') && 
-          !e.target.closest('#menuBtn') && 
-          nav.style.display === 'flex') {
+      if (window.innerWidth <= 900 && !e.target.closest('#nav') && !e.target.closest('#menuBtn') && nav.style.display === 'flex') {
         nav.style.display = 'none';
       }
     });
 
-    // ====== Search (فلترة حقيقية) ======
     const searchInput = document.getElementById('search');
     document.getElementById('searchBtn').addEventListener('click', runSearch);
     searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') runSearch(); });
 
     function runSearch() {
       const q = (searchInput.value || '').trim().toLowerCase();
-      if (!q) {
-        // reset view
-        mount();
-        return;
-      }
-      // أظهر صفحة النتائج داخل "الرئيسية"
+      if (!q) { mount(); return; }
       document.querySelectorAll('nav a').forEach(x => x.classList.remove('active'));
       document.querySelector('nav a[data-section="home"]').classList.add('active');
       document.querySelectorAll('main .section').forEach(s => s.style.display = 'none');
       document.getElementById('home').style.display = 'block';
-
       const filtered = items.filter(i => (i.title + " " + i.rawTitle + " " + i.desc).toLowerCase().includes(q));
       homeGrid.innerHTML = filtered.length ? filtered.map(cardTemplate).join('') : `<p style="color:#bbb;text-align:center;grid-column:1/-1;padding:20px">لا توجد نتائج مطابقة لعبارة البحث.</p>`;
-      bindDetailButtons();
+      bindButtons();
     }
 
     // ====== Request form ======
@@ -1253,15 +678,6 @@
 
     // ====== Init ======
     mount();
-    
-    // Close mobile menu on larger screens
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 900) {
-        nav.style.display = 'flex';
-      } else {
-        nav.style.display = 'none';
-      }
-    });
-  </script>
-</body>
+    window.addEventListener('resize', () => { if (window.innerWidth > 900) { nav.style.display = 'flex'; } else { nav.style.display = 'none'; } });
+  </script></body>
 </html>
